@@ -1,115 +1,125 @@
-
-*{
-    box-sizing: border-box;
-}
-/*Body*/
 body {
-    background-color: hsl(0, 0%, 0%);
-    text-decoration-color: grey;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #000000);
+    color: #333;
 }
-  
-/*title*/
-.title {
-    font-size: 50px;
-    font-style: oblique;
-    color: white;
-    text-align: center;
-    text-decoration: dotted 4px;
-}
-body a {
-    text-decoration: none;
-  
-}
-/*Navbar*/
-
-.navbar{
-    list-style-type: none;
-    background-color: hsl(0, 0%, 27%);
-    color: hsl(0, 0%, 100%);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    max-width: auto;
-}
-.navbar ul{
-    list-style-type: none;
-}
-
-.navbar a{
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
+.login {
+    position: absolute;
+    top: 15px;
+    right: 5px;
 }
 .login #loginBtn{
-    font-size: 30px;
+    font-size: 24px;
+}
+.login #loginBtn:hover{
+    color: hsl(48, 100%, 50%);
+}
+.login a {
+    text-decoration: none;
+    color: #333;
+}
+.navbar {
+    background-color: #4caf50;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar li {
+    margin: 0 10px;
+}
+.navbar a {
+    text-decoration: none;
     color: white;
-    position: absolute;
-    margin-left: 95%;
-    padding: 10px 15px;
-
+    font-weight: bold;
+    transition: color 0.3s;
 }
-.login:hover #loginBtn{
-    color: hsl(0, 0%, 60%);
+.navbar a:hover {
+    color: hsl(48, 100%, 50%);
 }
-
-/*Menu*/
 .menu {
-    display: inline-block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
 }
 .menu #menuBtn {
-    font-size: 30px;
-    color: white;
-    position: absolute;
-}
-.menu:hover #menuBtn {
-    color: hsl(240, 59%, 74%);
-}
-.menu #menuBtn {
-    padding: 10px 15px;
-    border: none;
+    font-size: 24px;
     cursor: pointer;
+    color: #333;
 }
-.menu a {
-    color: white;
+.menu:hover #menuBtn{
+    color: hsl(48, 100%, 50%);
+
+}
+.menu .content {
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.menu:hover .content,
+.menu .content:hover {
+    display: block;
+    animation: menu 100ms linear 1;
+}
+.menu .content a {
     display: block;
     text-decoration: none;
-    min-width: 100px;
+    color: #333;
+    padding: 5px 10px;
+    transition: background 0.3s;
 }
-.content a:hover{
-    background-color: hsl(126, 96%, 49%);
-}
-.menu .content{
-    display: none;
-    position: absolute;
-    background-color: hsl(0, 0%, 50%);
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsl(0, 0%, 42%);
-}
-.menu:hover .content{
-    display: block;
-    transition: 1s;
-    animation: menu 0.5s linear 1;
-} 
 
-.home #homeBtn{
+.menu .content a:hover {
+    background: #4caf50;
     color: white;
-    font-size: 30px;
-    cursor: pointer;
-    border: none;
-    padding: 10px 15px;
-}
-.home:hover #homeBtn {
-    color: hsl(0, 0%, 60%);
+    animation: grow 1s infinite;
 }
 
-
-
-p {
-    font-size: 2em;
-    font-style: italic;
-    color: white;
-    float: center;
+main {
     text-align: center;
+    padding: 50px;
+}
+.title {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1.25rem;
+}
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*Animations*/
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    0%{
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes grow{
+    50%{transform: scale(95%, 95%);}
 }

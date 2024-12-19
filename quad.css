@@ -48,9 +48,8 @@ p {
     display: inline-block;
 }
 .menu #menuBtn {
-    font-size: 24px;
+    font-size: 30px;
     color: white;
-    cursor: pointer;
     position: absolute;
 }
 .menu:hover #menuBtn {
@@ -117,7 +116,7 @@ p {
 }
 
 /*Answer*/
-#myH3 {
+#result {
     font-style: Verdana;
     font-size: 30px;
     color: white;   

@@ -1,0 +1,115 @@
+
+*{
+    box-sizing: border-box;
+}
+/*Body*/
+body {
+    background-color: hsl(0, 0%, 0%);
+    text-decoration-color: grey;
+}
+  
+/*title*/
+.title {
+    font-size: 50px;
+    font-style: oblique;
+    color: white;
+    text-align: center;
+    text-decoration: dotted 4px;
+}
+body a {
+    text-decoration: none;
+  
+}
+/*Navbar*/
+
+.navbar{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 27%);
+    color: hsl(0, 0%, 100%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    max-width: auto;
+}
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.login #loginBtn{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    margin-left: 95%;
+    padding: 10px 15px;
+
+}
+.login:hover #loginBtn{
+    color: hsl(0, 0%, 60%);
+}
+
+/*Menu*/
+.menu {
+    display: inline-block;
+}
+.menu #menuBtn {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+}
+.menu:hover #menuBtn {
+    color: hsl(240, 59%, 74%);
+}
+.menu #menuBtn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.menu a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+}
+.content a:hover{
+    background-color: hsl(126, 96%, 49%);
+}
+.menu .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 50%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 42%);
+}
+.menu:hover .content{
+    display: block;
+    transition: 1s;
+    animation: menu 0.5s linear 1;
+} 
+
+.home #homeBtn{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+}
+.home:hover #homeBtn {
+    color: hsl(0, 0%, 60%);
+}
+
+
+
+p {
+    font-size: 2em;
+    font-style: italic;
+    color: white;
+    float: center;
+    text-align: center;
+}

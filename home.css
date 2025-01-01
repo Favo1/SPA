@@ -5,21 +5,6 @@ body {
     background: linear-gradient(to bottom, #000000, #000000);
     color: #333;
 }
-.login {
-    position: absolute;
-    top: 15px;
-    right: 5px;
-}
-.login #loginBtn{
-    font-size: 24px;
-}
-.login #loginBtn:hover{
-    color: hsl(48, 100%, 50%);
-}
-.login a {
-    text-decoration: none;
-    color: #333;
-}
 .navbar {
     background-color: #4caf50;
     padding: 1rem;
@@ -44,6 +29,8 @@ body {
 .navbar a:hover {
     color: hsl(48, 100%, 50%);
 }
+
+/*Menu*/
 .menu {
     position: fixed;
     top: 15px;

@@ -4,26 +4,29 @@
 }
 /*Body*/
 body {
-    background-color: hsl(0, 0%, 0%);
-}
-
-body a {
-    text-decoration: none;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #000000);
+    color: #333;
 }
 
 /*Home*/
 .home {
- display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 0px
 }
 .home #homeBtn{
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     cursor: pointer;
     border: none;
     padding: 10px 15px;
 }
-.home:hover #homeBtn {
-    color: hsl(0, 0%, 60%);
+.home #homeBtn:hover  {
+    color: hsl(48, 100%, 50%);
 }
 
 /*title*/
@@ -45,46 +48,64 @@ p {
 
 /*Menu*/
 .menu {
-    display: inline-block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
 }
 .menu #menuBtn {
     font-size: 24px;
-    color: white;
     cursor: pointer;
-    position: absolute;
+    color: #333;
 }
-.menu:hover #menuBtn {
-    color: hsl(240, 59%, 74%);
+.menu:hover #menuBtn{
+    color: hsl(48, 100%, 50%);
+
 }
-.menu #menuBtn {
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
+.menu .content {
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
-.menu a {
-    color: white;
+.menu:hover .content,
+.menu .content:hover {
+    display: block;
+    animation: menu 100ms linear 1;
+}
+.menu .content a {
     display: block;
     text-decoration: none;
-    min-width: 100px;
+    color: #333;
+    padding: 5px 10px;
+    transition: background 0.3s;
 }
-.content a:hover{
-    background-color: hsl(126, 96%, 49%);
+
+.menu .content a:hover {
+    background: #4caf50;
+    color: white;
+    animation: grow 1s infinite;
 }
-.menu .content{
-    display: none;
-    position: absolute;
-    background-color: hsl(0, 0%, 50%);
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsl(0, 0%, 42%);
+
+/*Main*/
+main {
+    margin-top: 50px;
+    padding: 40px;
+    
 }
-.menu:hover .content{
-    display: block;
-    transition: 1s;
-    animation: menu 0.5s linear 1;
-} 
+main a{
+    text-decoration: none;
+}
+.title {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
 
 /*Form*/
-
 .form{
     color: white;
     display: block;
@@ -124,24 +145,17 @@ p {
     animation: wow 2s infinite;
     animation: grow 2000ms infinite running ;
 }
-
-/*Pagination*/
-.pagination{
+p {
+    font-size: 1.5rem;
+}
+footer {
+    background-color: #4caf50;
+    color: white;
     text-align: center;
-} 
-.pagination a{
-    color: hsl(0, 0%, 100%);
-    text-decoration: none;
-    padding: 8px 15px;
-    display: inline-block;
-}
-.pagination a.active{
-    background-color: hsl(120, 87%, 70%);
-    font-weight: bold;
-    border-radius: 5px;
-}
-.pagination a:hover:not(.active){
-    background-color: hsl(0, 57%, 46%);
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 @keyframes wow {

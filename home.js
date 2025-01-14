@@ -1,1 +1,0 @@
-window.alert("Welcome to the official Maths Calculators Home page:)")

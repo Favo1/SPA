@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculators</title>
+    <link rel="stylesheet" href="spa.css">
+    <link rel="icon" href="Images/favicon.png">
+    <script defer src="spa.js"></script>
+    <script src="https://kit.fontawesome.com/61bf11308e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="spa.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <i class="fa-solid fa-bars" id="menuBtn"></i>
+        <div class="content">
+            <a href="#" data-target="circ">Circumference</a>
+            <a href="#" data-target="rad">Radius</a>
+            <a href="#" data-target="quad">Quadratic Equation</a>
+        </div>
+    </div>
+
+    <!-- Welcome -->
+    <main class="welcome" class="page hidden">
+        <h1 class="title">Welcome to Maths Calculators</h1>
+        <p>Explore our wide range of tools designed to make your math problems easier to solve.</p>
+    </main>
+
+    <!-- Main Content -->
+    <main id="circ" class="page">
+        <h1 class="title">Circumference Calculator</h1>
+        <a href="https://en.wikipedia.org/wiki/Circumference" target="_blank">Learn More</a>
+        <div class="form">
+            <h3>Enter the radius of your circle:</h3>
+            <input type="text" id="radiusInput" placeholder="Radius">
+            <button id="calculateCirc">Calculate</button>
+            <h3 id="circResult"></h3>
+        </div>
+    </main>
+
+    <main id="rad" class="page hidden">
+        <h1 class="title">Radius Calculator</h1>
+        <a href="https://en.wikipedia.org/wiki/Radius" target="_blank">Learn More</a>
+        <div class="form">
+            <h3>Enter the diameter of your circle:</h3>
+            <input type="text" id="diameterInput" placeholder="Diameter">
+            <button id="calculateRad">Calculate</button>
+            <h3 id="radResult"></h3>
+        </div>
+    </main>
+
+    <main id="quad" class="page hidden">
+        <h1 class="title">Quadratic Equation Calculator</h1>
+        <a href="https://en.wikipedia.org/wiki/Quadratic_equation" target="_blank">Learn More</a>
+        <div class="form">
+            <h3>Enter coefficients for ax² + bx + c = 0:</h3>
+            <input type="text" id="aInput" placeholder="a">
+            <input type="text" id="bInput" placeholder="b">
+            <input type="text" id="cInput" placeholder="c">
+            <button id="calculateQuad">Calculate</button>
+            <h3 id="quadResult"></h3>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Maths Calculators. All rights reserved.</p>
+    </footer>
+</body>
+</html>

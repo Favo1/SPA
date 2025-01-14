@@ -1,12 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #000000, #000000);
-    color: #333;
+*{
+    box-sizing: border-box;
 }
+
+
+
+/*Nav-Bar*/
 .navbar {
-    background-color: #4caf50;
+    background-color: hsl(122, 39%, 49%);
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
@@ -39,7 +39,7 @@ body {
 .menu #menuBtn {
     font-size: 24px;
     cursor: pointer;
-    color: #333;
+    color: hsl(0, 0%, 20%);
 }
 .menu:hover #menuBtn{
     color: hsl(48, 100%, 50%);
@@ -50,8 +50,8 @@ body {
     position: fixed;
     top: 40px;
     left: 0;
-    background: white;
-    border: 1px solid #ccc;
+    background: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 80%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
@@ -63,13 +63,13 @@ body {
 .menu .content a {
     display: block;
     text-decoration: none;
-    color: #333;
+    color: hsl(0, 0%, 20%);
     padding: 5px 10px;
     transition: background 0.3s;
 }
 
 .menu .content a:hover {
-    background: #4caf50;
+    background: hsl(122, 39%, 49%);
     color: white;
     animation: grow 1s infinite;
 }
@@ -80,20 +80,53 @@ main {
 }
 .title {
     font-size: 2.5rem;
-    color: #4caf50;
+    color: hsl(122, 39%, 49%);
     margin-bottom: 1rem;
 }
 p {
     font-size: 1.25rem;
 }
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
+
+
+.page{
+    display: none;
     width: 100%;
+    min-height: 100%; /* allow for content off the bottom of the page */
+    position: fixed; /* or absolute if the user need to scroll for more content */
+    padding: 1rem 2rem;
+
+}
+.active{
+    display: block;
+}
+#home{
+    background-color: hsl(0, 0%, 30%);
+}
+#list{
+    background-color: hsl(292, 80%, 77%);
+}
+#detail{
+    background-color: hsl(267, 86%, 75%);
+}
+h1{
+ font-size: 2rem;
+ font-weight: 600;
+ transition: all 0.4s;
+}
+.big{
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+/*Footer*/
+footer{
+    bottom: 0px;
+    position: fixed;
+    background-color: hsl(0, 0%, 50%);
+    width: 100%;
+}
+footer p{
+    background-color: hsl(0, 0%, 50%);
 }
 
 /*Animations*/

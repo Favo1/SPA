@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(to bottom, #262626, #000000); */
+    background-image: url(images/Login.jpg);
+    color: #333;
+}
+
+/*Home*/
+.home {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 26px;
+    right: 165px;
+    
+}
+.home #homeBtn{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+}
+.home #homeBtn:hover  {
+    color: hsl(330, 84%, 17%);
+}
+
+
+/*Nav-Bar*/
+.navbar {
+    background-color: hsla(326, 86%, 46%, 0.522);
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    right: 1%;
+    min-width: auto;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar li {
+    margin: 0 10px;
+   
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: hsl(330, 84%, 17%);
+}
+
+/*Menu*/
+.menu {
+    display: inline-block;
+    padding: 15px;
+
+    color: white;
+}
+.menu #menuBtn{
+    font-size: 24px;
+    padding: 5px;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+}
+.menu #menuBtn:hover {
+    color: hsl(330, 84%, 17%);
+}
+.menu .content {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    background: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.menu:hover .content,
+.menu .content:hover{
+    display: block;
+    transition: all;
+    animation: menu 100ms linear 1;
+}
+.menu .content a {
+    display: block;
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+    padding: 5px;
+    transition: background 0.3s;
+}
+
+.menu .content a:hover {
+    background-color: hsla(330, 80%, 44%, 0.931);
+    color: white;
+    animation: grow 1s infinite;
+}
+
+/*WELCOME*/
+.welcome{
+    text-align: center;
+    padding: 50px;
+}
+
+/*Pages*/
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    padding: 20px;
+}
+
+.page.hidden {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    text-align: center;
+}
+
+/*Footer*/
+footer{
+    bottom: 0px;
+    position: fixed;
+    background-color: hsla(340, 2%, 26%, 0.112);
+    width: 100%;
+    max-height: 50px;
+}
+footer p{
+    text-align: center;
+}
+
+
+#circleResult, #radResult, #quadResult{
+    font-style: Verdana;
+    font-size: 30px;
+    /* color: hsl(0, 0%, 0%); */
+    animation: wow 2s infinite;
+    /* animation: grow 2000ms infinite running; */
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/*Animations*/
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    0%{
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes wow {
+    50%{
+     color: rgba(224, 31, 202, 0.499);
+    }
+    100%{
+        color: rgb(221, 57, 199);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow{
+    50%{transform: scale(95%, 95%);}
+}

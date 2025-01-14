@@ -117,9 +117,11 @@ body {
 .page {
     display: none;
     width: 100%;
-    min-height: 100%;
+    min-height: 30%;
     position: fixed;
     padding: 20px;
+    border: 2px outset rgba(225, 90, 191, 0.684);
+    background-color: hsla(0, 2%, 67%, 0.157);
 }
 
 .page.hidden {
@@ -144,15 +146,17 @@ footer p{
 }
 
 
-#circleResult, #radResult, #quadResult{
+#circResult, #radResult, #quadResult{
     font-style: Verdana;
     font-size: 30px;
-    /* color: hsl(0, 0%, 0%); */
-    animation: wow 2s infinite;
-    /* animation: grow 2000ms infinite running; */
-    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: hsl(308, 71%, 55%);
+    animation: answer 2.5s infinite;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+input{
+    text-align: center;
+}
 /*Animations*/
 @keyframes menu {
     0% {
@@ -163,12 +167,13 @@ footer p{
     }
 }
 
-@keyframes wow {
+@keyframes answer {
     50%{
-     color: rgba(224, 31, 202, 0.499);
+     color: hsl(268, 67%, 63%);
+     transform: scale(95%, 95%);
     }
     100%{
-        color: rgb(221, 57, 199);
+        color: hsl(308, 71%, 55%);
     }
 }
 
@@ -182,5 +187,7 @@ footer p{
 }
 
 @keyframes grow{
-    50%{transform: scale(95%, 95%);}
+    50%{
+        transform: scale(95%, 95%);
+    }
 }

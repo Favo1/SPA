@@ -4,6 +4,10 @@ body {
     padding: 0;
     /* background: linear-gradient(to bottom, #262626, #000000); */
     background-image: url(images/Login.jpg);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     color: #333;
 }
 
@@ -113,6 +117,19 @@ body {
     padding: 50px;
 }
 
+/*Main*/
+main a{
+ text-decoration: none;
+}
+main a:hover{
+    text-decoration: underline;
+    transform: translate3d(20px, 20px);
+}
+main a:visited{
+    color: red;
+}
+
+
 /*Pages*/
 .page {
     display: none;
@@ -121,7 +138,7 @@ body {
     position: fixed;
     padding: 20px;
     border: 2px outset rgba(225, 90, 191, 0.684);
-    background-color: hsla(0, 2%, 67%, 0.157);
+    background-color: hsla(330, 1%, 27%, 0.146);
 }
 
 .page.hidden {
@@ -145,7 +162,6 @@ footer p{
     text-align: center;
 }
 
-
 #circResult, #radResult, #quadResult{
     font-style: Verdana;
     font-size: 30px;
@@ -156,6 +172,19 @@ footer p{
 
 input{
     text-align: center;
+    border: 2px solid hsla(327, 73%, 62%, 0.758);
+    border-radius: 5PX;
+}
+
+button{
+    border: 2px solid hsla(327, 73%, 62%, 0.758);
+    border-radius: 5px;
+}
+
+button:hover{
+    border: 2px solid hsla(327, 73%, 62%, 0.758);
+    background-color: hsla(324, 66%, 62%, 0.503);
+    animation: grow 100ms linear;
 }
 /*Animations*/
 @keyframes menu {

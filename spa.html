@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="spa.css">
     <link rel="icon" href="Images/favicon.png">
     <script defer src="spa.js"></script>
+    <script  src="storage.js"></script>
     <script src="https://kit.fontawesome.com/61bf11308e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <p id="message"></p>
+    </header>
 
     <!-- Navbar -->
     <div class="navbar">
@@ -18,7 +21,6 @@
             <li><a href="spa.html">Home</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
-            
         </ul>
     </div>
 
@@ -29,12 +31,14 @@
             <a href="#" data-target="circ">Circumference</a>
             <a href="#" data-target="rad">Radius</a>
             <a href="#" data-target="quad">Quadratic Equation</a>
+            <a href="#" data-target="results">Saved Results</a>
         </div>
     </div>
 
     <!-- Welcome -->
     <main class="welcome" class="page hidden">
         <h1 class="title">Welcome to Maths Calculators</h1>
+        <p id="message">Hi</p>
         <p>Explore our wide range of tools designed to make your math problems easier to solve.</p>
     </main>
 
@@ -46,7 +50,12 @@
             <h3>Enter the radius of your circle:</h3>
             <input type="text" id="radiusInput" placeholder="Radius">
             <button id="calculateCirc">Calculate</button>
+            <button id="btnSave">SAVE</button>
             <h3 id="circResult"></h3>
+
+            <div class="hint">
+                <h3 id="save">Save your result.</h3>
+            </div>
         </div>
     </main>
 
@@ -57,8 +66,12 @@
             <h3>Enter the diameter of your circle:</h3>
             <input type="text" id="diameterInput" placeholder="Diameter">
             <button id="calculateRad">Calculate</button>
+            <button id="btnSave">SAVE</button>
             <h3 id="radResult"></h3>
-        </div>
+
+            <div class="hint">
+                <h3 id="save">Save your result.</h3>
+            </div>
     </main>
 
     <main id="quad" class="page hidden">
@@ -70,7 +83,19 @@
             <input type="text" id="bInput" placeholder="b">
             <input type="text" id="cInput" placeholder="c">
             <button id="calculateQuad">Calculate</button>
+            <button id="btnSave">SAVE</button>
             <h3 id="quadResult"></h3>
+            
+            <div class="hint">
+                <h3 id="save">Save your result.</h3>
+            </div>
+        </div>
+    </main>
+
+    <main id="results" class="page hidden">
+        <h1 class="title">Results</h1>
+        <div class="saved">
+            <h3>Radius</h3> <h3>Circumference</h3> <h3>Quadratic Equation</h3>
         </div>
     </main>
 

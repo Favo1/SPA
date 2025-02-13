@@ -68,7 +68,6 @@ body {
 .menu {
     display: inline-block;
     padding: 15px;
-
     color: white;
 }
 .menu #menuBtn{
@@ -83,7 +82,7 @@ body {
 .menu .content {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 10px;
     background: hsl(0, 0%, 100%);
     border: 1px solid hsl(0, 0%, 80%);
@@ -150,6 +149,31 @@ main a:visited{
     text-align: center;
 }
 
+/*save hint*/ 
+.page .hint{
+    display: none;
+    padding: 10px;
+
+}
+
+.page #btnSave:hover .hint{
+    display: block;
+    transition: all;
+    animation: hint 2s linear;
+}
+
+/*Saved results*/  
+#results h3{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#results h3:hover{
+    text-decoration: underline;
+    color: hsl(308, 71%, 55%);
+    animation: grow 1s infinite ;
+    transition: 500ms;
+}
+
 /*Footer*/
 footer{
     bottom: 0px;
@@ -173,7 +197,7 @@ footer p{
 input{
     text-align: center;
     border: 2px solid hsla(327, 73%, 62%, 0.758);
-    border-radius: 5PX;
+    border-radius: 5px;
 }
 
 button{
@@ -186,6 +210,8 @@ button:hover{
     background-color: hsla(324, 66%, 62%, 0.503);
     animation: grow 100ms linear;
 }
+
+
 /*Animations*/
 @keyframes menu {
     0% {
@@ -200,6 +226,16 @@ button:hover{
     50%{
      color: hsl(268, 67%, 63%);
      transform: scale(95%, 95%);
+    }
+    100%{
+        color: hsl(308, 71%, 55%);
+    }
+}
+
+@keyframes hint {
+    50%{
+        color: hsl(268, 67%, 63%);
+        transform: scale(95%, 95%);
     }
     100%{
         color: hsl(308, 71%, 55%);

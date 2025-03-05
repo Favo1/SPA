@@ -128,7 +128,6 @@ main a:visited{
     color: red;
 }
 
-
 /*Pages*/
 .page {
     display: none;
@@ -139,6 +138,8 @@ main a:visited{
     border: 2px outset rgba(225, 90, 191, 0.684);
     background-color: hsla(330, 1%, 27%, 0.146);
 }
+
+
 
 .page.hidden {
     display: none;
@@ -160,18 +161,6 @@ main a:visited{
     display: block;
     transition: all;
     animation: hint 2s linear;
-}
-
-/*Saved results*/  
-#results h3{
-    font-size: 1.5em;
-    cursor: pointer;
-}
-#results h3:hover{
-    text-decoration: underline;
-    color: hsl(308, 71%, 55%);
-    animation: grow 1s infinite ;
-    transition: 500ms;
 }
 
 /*Footer*/

@@ -1,34 +1,4 @@
-    <div class="page active" id="home">
-          <h1>Home</h1>
-          <ol>
-            <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-            <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-            <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-          </ol>
-    </div>
-
-    <div class="page" id="list">
-        <h1>List</h1>
-        <ol>
-            <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-            <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-            <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-        </ol>
-    </div>
-
-    <div class="page" id="detail">
-        <h1>Detail</h1>
-        <ol>
-            <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-            <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-            <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-        </ol>
-    </div>
-
-
-
-
-    //
+//
 const app = {
     pages: [],
     show: new Event('show'),
@@ -68,7 +38,7 @@ const app = {
         document.getElementById(hash).classList.add('active');
         console.log(hash)
         //history.pushState({}, currentPage, `#${currentPage}`);
-        document.getElementById(hash).dispatchEvent(app.show);
+        document.getElementById(hash).dispatchEvent(app.show);      
     }
 }
 

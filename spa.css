@@ -82,7 +82,7 @@ body {
 .menu .content {
     display: none;
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 10px;
     background: hsl(0, 0%, 100%);
     border: 1px solid hsl(0, 0%, 80%);
@@ -91,7 +91,7 @@ body {
     padding: 10px;
 }
 .menu:hover .content,
-.menu .content:hover{
+.menu .content:hover {
     display: block;
     transition: all;
     animation: menu 100ms linear 1;
@@ -103,7 +103,6 @@ body {
     padding: 5px;
     transition: background 0.3s;
 }
-
 .menu .content a:hover {
     background-color: hsla(330, 80%, 44%, 0.931);
     color: white;
@@ -134,12 +133,24 @@ main a:visited{
     width: 100%;
     min-height: 30%;
     position: fixed;
-    padding: 20px;
+    padding: 10px;
     border: 2px outset rgba(225, 90, 191, 0.684);
     background-color: hsla(330, 1%, 27%, 0.146);
 }
+main h3{
+    font-size: 2rem;
+}
+main a{
+    font-size: 2rem;
+    color: purple;
+}
 
-
+main a:visited{
+    color: pink;
+}
+#circ, #rad, #quad {
+    margin-top: 200px;
+} 
 
 .page.hidden {
     display: none;
@@ -154,7 +165,6 @@ main a:visited{
 .page .hint{
     display: none;
     padding: 10px;
-
 }
 
 .page #btnSave:hover .hint{
@@ -162,7 +172,13 @@ main a:visited{
     transition: all;
     animation: hint 2s linear;
 }
-
+#results{
+    min-height: auto;
+    min-width: auto;
+    margin-top: 50px;
+    align-items: center;
+    transform: translateY(200px);
+}
 /*Footer*/
 footer{
     bottom: 0px;
@@ -187,11 +203,13 @@ input{
     text-align: center;
     border: 2px solid hsla(327, 73%, 62%, 0.758);
     border-radius: 5px;
+    font-size: large;
 }
 
 button{
     border: 2px solid hsla(327, 73%, 62%, 0.758);
     border-radius: 5px;
+    font-size: large;
 }
 
 button:hover{
@@ -200,6 +218,9 @@ button:hover{
     animation: grow 100ms linear;
 }
 
+#btnClr:hover{
+    background-color:red;
+}
 
 /*Animations*/
 @keyframes menu {

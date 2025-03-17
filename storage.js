@@ -1,35 +1,33 @@
-// Storage App
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("#btnSave").forEach(button => {
+    document.querySelectorAll("[id=btnSave]").forEach(button => {
         button.addEventListener("click", function () {
             let parent = button.closest(".form");
-            let input = parent.querySelector("input");
+            let inputs = parent.querySelectorAll("input");
             let result = parent.querySelector("h4");
             let category = parent.closest("main").id; // Get category based on main element ID
-            if(button) {
-                window.alert("Your result has been saved!")
-            };
-           
-            if (input && result && input.value.trim() !== "" && result.textContent.trim() !== "") {
-                saveResult(category, input.value, result.textContent);
+            
+            let inputValues = Array.from(inputs).map(input => input.value.trim()).join(", ");
+            
+            console.log("Inputs:", inputValues); // Debugging log
+            console.log("Result:", result.textContent); // Debugging log
+            
+            if (inputValues && result && result.textContent.trim() !== "") {
+                window.alert("Your results have been saved!")
+                saveResult(category, inputValues, result.textContent);
             } else {
-                alert("Please enter a value and calculate before saving.");
+                alert("Please enter values and calculate before saving.");
             }
         });
-    }); 
-
-    const clrBtn = document.getElementById("btnClr");
-    if(clrBtn){
-        clrBtn.addEventListener("click", function () {
-            console.log("Clear button clicked"); //Debug log
-            clearResults();
-        });
-    }else {
-        console.error("Clear Results button not found");
+    });
+    
+    let clearButton = document.getElementById("btnClr");
+    if (clearButton) {
+        clearButton.addEventListener("click", clearResults);
     }
+
     displaySavedResults();
 });
-
+//Save results
 function saveResult(category, inputValue, resultValue) {
     let savedResults = JSON.parse(localStorage.getItem("savedResults")) || {};
     
@@ -39,16 +37,21 @@ function saveResult(category, inputValue, resultValue) {
     
     savedResults[category].push({ input: inputValue, result: resultValue });
     localStorage.setItem("savedResults", JSON.stringify(savedResults));
+
+    console.log("Saved Results:", savedResults); // Debugging log
     displaySavedResults();
 }
 
+//Display results
 function displaySavedResults() {
     let savedContainer = document.getElementById("saved");
     savedContainer.innerHTML = ""; // Clear previous content
     let savedResults = JSON.parse(localStorage.getItem("savedResults")) || {};
     
+    console.log("Displaying Saved Results:", savedResults); // Debugging log
+    
     if (Object.keys(savedResults).length === 0) {
-        savedContainer.innerHTML = "<p>sorry, you have no saved results yet:(</p>"; // Show empty state
+        savedContainer.innerHTML = "<p>No saved results.</p>";
     } else {
         for (let category in savedResults) {
             let categoryDiv = document.createElement("div");
@@ -56,7 +59,7 @@ function displaySavedResults() {
             
             savedResults[category].forEach(entry => {
                 let entryDiv = document.createElement("p");
-                entryDiv.textContent = `Input: ${entry.input}, Result: ${entry.result}`;
+                entryDiv.textContent = `Inputs: ${entry.input}, Result: ${entry.result}`;
                 categoryDiv.appendChild(entryDiv);
             });
 
@@ -65,11 +68,9 @@ function displaySavedResults() {
     }
 }
 
+//Clear results
 function clearResults() {
-    console.log("Clearing localStorage...");
-    localStorage.removeItem('savedResults');
-    // location.reload();
+    console.log("Clearing localStorage..."); // Debugging log
+    localStorage.removeItem("savedResults");
     displaySavedResults();
 }
-
-

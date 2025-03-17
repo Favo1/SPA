@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
         message.innerHTML = "This is your visit #" +numerOfVisits;
     } else {
         // Its the first time the user visits my page
-        message.innerHTML = "welcome for the first time to our page"; 
+        message.innerHTML = "welcome for the first time to our page";
         localStorage.setItem("visits", "1");
     }
 });
 
 //Pages active/Hidden 
 document.addEventListener('DOMContentLoaded', () => {
-    const menuLinks = document.querySelectorAll('.menu a');
+    const menuLinks = document.querySelectorAll('.menu a', '.navbar a');
     const pages = document.querySelectorAll('.page');
 
     menuLinks.forEach(link => {

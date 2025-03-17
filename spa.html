@@ -11,14 +11,11 @@
     <script src="https://kit.fontawesome.com/61bf11308e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <p id="message"></p>
-    </header>
 
     <!-- Navbar -->
     <div class="navbar">
         <ul>
-            <li><a href="spa.html">Home</a></li>
+            <li><a href="#" data-target="home">Home</a></li>
             <li><a href="#" data-target="contact">Contact</a></li>
             <li><a href="#" data-target="about">About</a></li>
         </ul>
@@ -36,22 +33,22 @@
     </div>
 
     <!-- Welcome -->
-    <main class="welcome" class="page hidden">
+    <main class="page hidden" id="home">
         <h1 class="title">Maths Calculators</h1>
-        <p>Explore our wide range of tools designed to make your math problems easier to solve.</p>
+        <p>Explore our wide range of tools designed to make your math problems easy as 123.</p>
     </main>
 
-    <main id="about" class="page"><p> Maths Calculators aims to provide simple, user friendly mathematical calculators tools for your convinience</p></main>
+    
 
     <!-- Main Content -->
-    <main id="circ" class="page">
+    <main id="circ" class="page hidden">
         <h1 class="title">Circumference Calculator</h1>
         <a href="https://en.wikipedia.org/wiki/Circumference" target="_blank">Learn More</a>
         <div class="form">
             <h3>Enter the radius of your circle:</h3>
             <input type="text" id="radiusInput" placeholder="Radius">
             <button id="calculateCirc">Calculate</button>
-            <a href="#" datat-target="rad-res"></a><button id="btnSave">SAVE</button>
+            </a><button id="btnSave">SAVE</button>
             <h4 id="circResult"></h4>
 
             <div class="hint">
@@ -67,7 +64,7 @@
             <h3>Enter the diameter of your circle:</h3>
             <input type="text" id="diameterInput" placeholder="Diameter">
             <button id="calculateRad">Calculate</button>
-            <a href="#" data-target="rad-res"></a><button id="btnSave">SAVE</button>
+            </a><button id="btnSave">SAVE</button>
             <h4 id="radResult"></h4>
 
             <div class="hint">
@@ -84,7 +81,7 @@
             <input type="text" id="bInput" placeholder="b">
             <input type="text" id="cInput" placeholder="c">
             <button id="calculateQuad">Calculate</button>
-            <a href="#" data-target="quad-res"><button id="btnSave">SAVE</button></a>
+            <button id="btnSave">SAVE</button></a>
             <h4 class="res" id="quadResult"></h4>
             
             <div class="hint">
@@ -93,12 +90,12 @@
         </div>
     </main>
 
+    <main id="about" class="page hidden"><p>Maths Calculators aims to provide simple, user friendly mathematical calculators tools for your convinience</p></main>
+
     <main id="results" class="page hidden">
         <h1 class="title">Results</h1>
 
-        <div id="saved">
-            
-        </div>
+        <div id="saved"></div>
          <button id="btnClr">Clear All</button>
     </main>
 

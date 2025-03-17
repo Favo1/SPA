@@ -1,50 +1,74 @@
-//
-const app = {
-    pages: [],
-    show: new Event('show'),
-    init: function(){
-        app.pages = document.querySelectorAll('.page');
-        app.pages.forEach((pg)=>{
-            pg.addEventListener('show', app.pageShown);
-        })
-        
-        document.querySelectorAll('.nav-link').forEach((link)=>{
-            link.addEventListener('click', app.nav);
-        })
-        history.replaceState({}, 'Home', '#home');
-        window.addEventListener('popstate', app.poppin);
-    },
-    nav: function(ev){
-        ev.preventDefault();
-        let currentPage = ev.target.getAttribute('data-target');
-        document.querySelector('.active').classList.remove('active');
-        document.getElementById(currentPage).classList.add('active');
-        console.log(currentPage)
-        history.pushState({}, currentPage, `#${currentPage}`);
-        document.getElementById(currentPage).dispatchEvent(app.show);
-    },
-    pageShown: function(ev){
-        console.log('Page', ev.target.id, 'just shown');
-        let h1 = ev.target.querySelector('h1');
-        h1.classList.add('big')
-        setTimeout((h)=>{
-            h.classList.remove('big');
-        }, 1200, h1);
-    },
-    poppin: function(ev){
-        console.log(location.hash, 'popstate event');
-        let hash = location.hash.replace('#' ,'');
-        document.querySelector('.active').classList.remove('active');
-        document.getElementById(hash).classList.add('active');
-        console.log(hash)
-        //history.pushState({}, currentPage, `#${currentPage}`);
-        document.getElementById(hash).dispatchEvent(app.show);      
+// Storage App
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[id=btnSave]").forEach(button => {
+        button.addEventListener("click", function () {
+            let parent = button.closest(".form");
+            let inputs = parent.querySelectorAll("input");
+            let result = parent.querySelector("h3");
+            let category = parent.closest("main").id; // Get category based on main element ID
+            
+            let inputValues = Array.from(inputs).map(input => input.value.trim()).join(", ");
+            
+            console.log("Inputs:", inputValues); // Debugging log
+            console.log("Result:", result.textContent); // Debugging log
+            
+            if (inputValues && result && result.textContent.trim() !== "") {
+                saveResult(category, inputValues, result.textContent);
+            } else {
+                alert("Please enter values and calculate before saving.");
+            }
+        });
+    });
+    
+    let clearButton = document.getElementById("clearResults");
+    if (clearButton) {
+        clearButton.addEventListener("click", clearResults);
+    }
+
+    displaySavedResults();
+});
+
+function saveResult(category, inputValue, resultValue) {
+    let savedResults = JSON.parse(localStorage.getItem("savedResults")) || {};
+    
+    if (!savedResults[category]) {
+        savedResults[category] = [];
+    }
+    
+    savedResults[category].push({ input: inputValue, result: resultValue });
+    localStorage.setItem("savedResults", JSON.stringify(savedResults));
+
+    console.log("Saved Results:", savedResults); // Debugging log
+    displaySavedResults();
+}
+
+function displaySavedResults() {
+    let savedContainer = document.getElementById("saved");
+    savedContainer.innerHTML = ""; // Clear previous content
+    let savedResults = JSON.parse(localStorage.getItem("savedResults")) || {};
+    
+    console.log("Displaying Saved Results:", savedResults); // Debugging log
+    
+    if (Object.keys(savedResults).length === 0) {
+        savedContainer.innerHTML = "<p>No saved results.</p>";
+    } else {
+        for (let category in savedResults) {
+            let categoryDiv = document.createElement("div");
+            categoryDiv.innerHTML = `<h2>${category}</h2>`;
+            
+            savedResults[category].forEach(entry => {
+                let entryDiv = document.createElement("p");
+                entryDiv.textContent = `Inputs: ${entry.input}, Result: ${entry.result}`;
+                categoryDiv.appendChild(entryDiv);
+            });
+
+            savedContainer.appendChild(categoryDiv);
+        }
     }
 }
 
-//
-
-
-
-
-document.addEventListener('DOMContentLoaded', app.init);
+function clearResults() {
+    console.log("Clearing localStorage..."); // Debugging log
+    localStorage.removeItem("savedResults");
+    displaySavedResults();
+}

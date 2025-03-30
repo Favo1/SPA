@@ -11,13 +11,13 @@
     <script src="https://kit.fontawesome.com/61bf11308e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    
     <!-- Navbar -->
     <div class="navbar">
         <ul>
-            <li><a href="#" data-target="home">Home</a></li>
-            <li><a href="#" data-target="contact">Contact</a></li>
-            <li><a href="#" data-target="about">About</a></li>
+            <li><a href="#" data-target-2="home" >Home</a></li>
+            <!-- <li><a href="#" data-target-2="contact">Contact</a></li> -->
+            <li><a href="#" data-target-2="about">About</a></li>
         </ul>
     </div>
 
@@ -26,81 +26,90 @@
         <i class="fa-solid fa-bars" id="menuBtn"></i>
         <div class="content">
             <a href="#" data-target="circ">Circumference</a>
-            <a href="#" data-target="rad">Radius</a>
+            <a href="#" data-target="rad" >Radius</a>
             <a href="#" data-target="quad">Quadratic Equation</a>
             <a href="#" data-target="results">Saved Results</a>
         </div>
     </div>
 
-    <!-- Welcome -->
-    <main class="page hidden" id="home">
-        <h1 class="title">Maths Calculators</h1>
-        <p>Explore our wide range of tools designed to make your math problems easy as 123.</p>
+    <!--Title-->
+    <h1 id="title"><a href="spa.html">Maths Calculators</a></h1>
+
+    <!--Home-->
+    
+    <main id="home" class="page2">
+        <p>Explore our wide range of tools designed to make your math problems easy as 123.
+            <br>
+            Select from the available calculators located in the menu (Top-Left-Corner) 
+        </p>
+    </main>
+    
+    <!--About-->
+
+    <main id="about" class="page2">
+        <p>Maths Calculators aims to provide simple, user friendly mathematical calculators tools for your convinience</p>
+    </main>
+
+
+    <!--Contact-->
+    <main>
+        <h1></h1>
+        <p></p>
     </main>
 
     
-
-    <!-- Main Content -->
-    <main id="circ" class="page hidden">
+    <!-- Circumference -->
+    <main id="circ" class="page">
         <h1 class="title">Circumference Calculator</h1>
         <a href="https://en.wikipedia.org/wiki/Circumference" target="_blank">Learn More</a>
-        <div class="form">
-            <h3>Enter the radius of your circle:</h3>
-            <input type="text" id="radiusInput" placeholder="Radius">
-            <button id="calculateCirc">Calculate</button>
-            </a><button id="btnSave">SAVE</button>
-            <h4 id="circResult"></h4>
-
-            <div class="hint">
-                <h3 id="save">Save your result.</h3>
+            <div class="form">
+                <h3>Enter the radius of your circle:</h3>
+                <input type="text" id="radiusInput" placeholder="Radius">
+                <button id="calculateCirc">Calculate</button>
+                </a><button id="btnSave">SAVE</button>
+                <h4 id="circResult"></h4>   
             </div>
-        </div>
-    </main>
+    </main> 
+                                                                                                                                         
 
-    <main id="rad" class="page hidden">
+    <!--Radius-->
+    <main id="rad" class="page">
         <h1 class="title">Radius Calculator</h1>
         <a href="https://en.wikipedia.org/wiki/Radius" target="b_blank">Learn More</a>
-        <div class="form">
-            <h3>Enter the diameter of your circle:</h3>
-            <input type="text" id="diameterInput" placeholder="Diameter">
-            <button id="calculateRad">Calculate</button>
-            </a><button id="btnSave">SAVE</button>
-            <h4 id="radResult"></h4>
-
-            <div class="hint">
-                <h3 id="save">Save your result.</h3>
+            <div class="form">
+                <h3>Enter the diameter of your circle:</h3>
+                <input type="text" id="diameterInput" placeholder="Diameter">
+                <button id="calculateRad">Calculate</button>
+                </a><button id="btnSave">SAVE</button>
+                <h4 id="radResult"></h4>
             </div>
     </main>
+    
 
-    <main id="quad" class="page hidden">
+    <!--Quadratic-->
+    <main id="quad" class="page">
         <h1 class="title">Quadratic Equation Calculator</h1>
         <a href="https://en.wikipedia.org/wiki/Quadratic_equation" target="_blank">Learn More</a>
-        <div class="form">
-            <h3>Enter coefficients for ax² + bx + c = 0:</h3>
-            <input type="text" id="aInput" placeholder="a">
-            <input type="text" id="bInput" placeholder="b">
-            <input type="text" id="cInput" placeholder="c">
-            <button id="calculateQuad">Calculate</button>
-            <button id="btnSave">SAVE</button></a>
-            <h4 class="res" id="quadResult"></h4>
-            
-            <div class="hint">
-                <h3 id="save">Save your result.</h3>
+            <div class="form">
+                <h3>Enter coefficients for ax² + bx + c = 0:</h3>
+                <input type="text" id="aInput" placeholder="a">
+                <input type="text" id="bInput" placeholder="b">
+                <input type="text" id="cInput" placeholder="c">
+                <button id="calculateQuad">Calculate</button>
+                <button id="btnSave">SAVE</button></a>
+                    <h4 class="res" id="quadResult"></h4>
             </div>
-        </div>
-    </main>
+    </main>    
 
-    <main id="about" class="page hidden"><p>Maths Calculators aims to provide simple, user friendly mathematical calculators tools for your convinience</p></main>
-
-    <main id="results" class="page hidden">
+    <!--Results-->
+    <main id="results" class="page">
         <h1 class="title">Results</h1>
-
         <div id="saved"></div>
          <button id="btnClr">Clear All</button>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Maths Calculators. All rights reserved.</p>
-    </footer>
+    <!-- <footer>
+        <strong><p>&copy; 2025 Maths Calculators. All rights reserved.</p></strong>
+    </footer> -->
 </body>
 </html>

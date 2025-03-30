@@ -2,25 +2,47 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* background: linear-gradient(to bottom, #262626, #000000); */
+    /* background: linear-gradient(to bottom, #f16fde, #b623e3); */
     background-image: url(images/Login.jpg);
     background-repeat: repeat-x;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    color: #333;
+    /* color: #333; */
 }
 
-/*Home*/
-.home {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    top: 26px;
-    right: 165px;
-    
+/*Menu*/
+#title {
+    display: block;
+    position: static;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: -40px;
+    text-shadow: 1px 2px 1px rgb(229, 28, 199);
+    text-decoration: 3.5px dotted;
+    user-select: none;
 }
-.home #homeBtn{
+#title a {
+    text-decoration: none;
+    color: white;
+}
+/*Home*/
+#home, #about{
+    align-content: space-around;
+    position: sticky;
+    margin-top: 200px;
+    text-align: center;
+    user-select: none;
+}
+#home p, #about {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+
+.home #homeBtn {
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -35,7 +57,7 @@ body {
 /*Nav-Bar*/
 .navbar {
     background-color: hsla(326, 86%, 46%, 0.522);
-    padding: 1rem;
+    padding: 15px;
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -43,6 +65,7 @@ body {
     min-width: auto;
     margin-top: 20px;
     border-radius: 25px;
+    user-select: none;
 }
 .navbar ul {
     list-style: none;
@@ -69,10 +92,13 @@ body {
     display: inline-block;
     padding: 15px;
     color: white;
+    user-select: none;
+    max-width: 0px;
 }
 .menu #menuBtn{
+    position: sticky;
     font-size: 24px;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
     color: hsl(0, 0%, 100%);
 }
@@ -85,7 +111,7 @@ body {
     top: 60px;
     left: 10px;
     background: hsl(0, 0%, 100%);
-    border: 1px solid hsl(0, 0%, 80%);
+    border: 8px double hsl(341, 63%, 65%);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -93,12 +119,13 @@ body {
 .menu:hover .content,
 .menu .content:hover {
     display: block;
-    transition: all;
+    /* transition: all; */
     animation: menu 100ms linear 1;
 }
 .menu .content a {
     display: block;
     text-decoration: none;
+    font-size: large;
     color: hsl(0, 0%, 20%);
     padding: 5px;
     transition: background 0.3s;
@@ -109,48 +136,14 @@ body {
     animation: grow 1s infinite;
 }
 
-/*WELCOME*/
-.welcome{
-    text-align: center;
-    padding: 50px;
-}
-
-/*Main*/
-main a{
- text-decoration: none;
-}
-main a:hover{
-    text-decoration: underline;
-    transform: translate3d(20px, 20px);
-}
-main a:visited{
-    color: red;
-}
-
-/*Pages*/
+/*Pages 1-2*/
 .page {
     display: none;
-    width: 100%;
-    min-height: 30%;
-    position: fixed;
+    min-width: 100%;
     padding: 10px;
-    border: 2px outset rgba(225, 90, 191, 0.684);
-    background-color: hsla(330, 1%, 27%, 0.146);
+    border: 6px outset rgb(225, 90, 191);
+    background-color: hsla(339, 84%, 65%, 0.281);     
 }
-main h3{
-    font-size: 2rem;
-}
-main a{
-    font-size: 2rem;
-    color: purple;
-}
-
-main a:visited{
-    color: pink;
-}
-#circ, #rad, #quad {
-    margin-top: 200px;
-} 
 
 .page.hidden {
     display: none;
@@ -158,40 +151,100 @@ main a:visited{
 
 .page.active {
     display: block;
+    position:  fixed;
+    margin-top: 100px;
     text-align: center;
+    animation: page 800ms linear 1;
 }
+
+.page2 {
+    display: none;
+    min-width: 100%;
+    padding: 10px;
+    border: 6px Dotted rgb(233, 38, 184);
+    background-color: hsla(339, 84%, 65%, 0.281);
+}
+
+.page2.hidden2{
+    display: none;
+}
+
+.page2.active2{
+    display: block;
+    position: relative;
+    margin-top: 140px;         
+    text-align: center;
+    animation: page 800ms linear 1;
+}
+
+.hidden{
+    display: none;
+}
+/**************************************************/
+
+/* Main */
+main h1{
+    user-select: none;
+}
+
+main h3 {
+    font-size: 2rem;
+    user-select: none;
+}
+
+main a {
+    font-size: 2rem;
+    color: rgb(240, 12, 213);
+    user-select: none;
+    text-decoration: wavy;
+}
+
+main a:hover {
+    text-decoration: underline rgb(255, 255, 255);
+    background-color: white;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+main a:visited {
+    color: red;
+}
+
+#circ, #rad, #quad {
+    margin-top: 200px;
+} 
 
 /*save hint*/ 
-.page .hint{
-    display: none;
-    padding: 10px;
-}
-
-.page #btnSave:hover .hint{
+.page #btnSave:hover .hint {
     display: block;
     transition: all;
     animation: hint 2s linear;
 }
-#results{
-    min-height: auto;
-    min-width: auto;
-    margin-top: 50px;
+#results {
+    max-height: auto;
+    max-width: 100%;
+    margin-top: 190px;
     align-items: center;
-    transform: translateY(200px);
+    border: 5px dotted rgb(225, 90, 191);
 }
+#results h1{
+    color: white;
+}
+
 /*Footer*/
-footer{
+footer {
     bottom: 0px;
     position: fixed;
-    background-color: hsla(340, 2%, 26%, 0.112);
-    width: 100%;
-    max-height: 50px;
+    background-color: hsla(340, 78%, 69%, 0.302);
+    width: 100%; 
+    max-height: 100px; 
 }
-footer p{
+
+footer p {
     text-align: center;
 }
 
-#circResult, #radResult, #quadResult{
+#circResult, #radResult, #quadResult {
     font-style: Verdana;
     font-size: 30px;
     color: hsl(308, 71%, 55%);
@@ -199,27 +252,30 @@ footer p{
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-input{
+input {
     text-align: center;
-    border: 2px solid hsla(327, 73%, 62%, 0.758);
-    border-radius: 5px;
+    border: 4px solid hsla(327, 73%, 62%, 0.758);
+    border-radius: 10px;
     font-size: large;
 }
 
-button{
-    border: 2px solid hsla(327, 73%, 62%, 0.758);
-    border-radius: 5px;
+button {
+    border: 4px solid hsla(327, 73%, 62%, 0.758);
+    border-radius: 10px;
     font-size: large;
+    user-select: none;
 }
 
-button:hover{
+button:hover {
     border: 2px solid hsla(327, 73%, 62%, 0.758);
     background-color: hsla(324, 66%, 62%, 0.503);
-    animation: grow 100ms linear;
+    /* animation: grow 100ms 1 linear; */
 }
 
-#btnClr:hover{
-    background-color:red;
+#btnClr:hover {
+    background-color: red;
+    border: 4px solid red;
+    /* animation: grow 100ms linear; */
 }
 
 /*Animations*/
@@ -227,8 +283,19 @@ button:hover{
     0% {
         opacity: 0;
     }
-    0%{
+    100%{
         transform: translateX(-100px);
+    }
+}
+@keyframes page {
+    0%{
+        opacity: 0;
+        transform: scale3d(1.5,1.5,1.5);
+        transform: translateY(-100px);
+    }
+    70%{
+        opacity: 1;
+        transition: all;
     }
 }
 
@@ -252,16 +319,7 @@ button:hover{
     }
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(90deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes grow{
+@keyframes grow {
     50%{
         transform: scale(95%, 95%);
     }

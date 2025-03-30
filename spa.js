@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var message = document.querySelector("#message");
     if (numberOfVisits) {
         localStorage.setItem("visits", parseInt(numberOfVisits)+1);
-        message.innerHTML = "This is your visit #" +numerOfVisits;
+        message.innerHTML = "This is your visit #" + numberOfVisits;
     } else {
         // Its the first time the user visits my page
         message.innerHTML = "welcome for the first time to our page";
@@ -12,19 +12,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-//Pages active/Hidden 
+
+//Pages active/Hidden\\
 document.addEventListener('DOMContentLoaded', () => {
-    const menuLinks = document.querySelectorAll('.menu a', '.navbar a');
-    const pages = document.querySelectorAll('.page');
+    const menuLinks = document.querySelectorAll('.menu a'); // Manu links
+    const pages = document.querySelectorAll('.page');  // Menu pages
+    const navLinks = document.querySelectorAll('.navbar a'); // Nav links
+    const pages2 = document.querySelectorAll('.page2');  // Nav pages
 
     menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = e.target.getAttribute('data-target');
-            
-            // Hide all pages and show the selected one
+
+            // Hide all menu pages and show the selected one
             pages.forEach(page => {
-                if (page.id === targetId) {
+                if(page.id === targetId){
                     page.classList.add('active');
                     page.classList.remove('hidden');
                 } else {
@@ -32,8 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
                     page.classList.add('hidden');
                 }
             });
+
+            // Hide all nav pages when a menu page is active
+            pages2.forEach(page2 => {
+                if(page2.id === targetId){
+                    page2.classList.add('active2');
+                    page2.classList.remove('hidden2');
+                } else {
+                    page2.classList.remove('active2');
+                    page2.classList.add('hidden2');
+                }
+            });
         });
     });
+
+    navLinks.forEach(nav => {
+        nav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId2 = e.target.getAttribute('data-target-2');
+
+            // Hide all nav pages and show the selected one
+            pages2.forEach(page2 => {
+                if(page2.id === targetId2){
+                    page2.classList.add('active2');
+                    page2.classList.remove('hidden2');
+                } else {
+                    page2.classList.remove('active2');
+                    page2.classList.add('hidden2');
+                }
+            });
+
+            // Hide all menu pages when a nav page is active
+            pages.forEach(page => {
+                page.classList.remove('active');
+                page.classList.add('hidden');
+            });
+        });
+    });
+})
 
     // Example: Circumference Calculation
     document.getElementById('calculateCirc').addEventListener('click', () => {
@@ -114,5 +153,3 @@ document.addEventListener('DOMContentLoaded', () => {
         // 5. Output the result to the designated HTML element
         document.getElementById('quadResult').textContent = result;
     });
-    
-});

@@ -1,74 +1,45 @@
-// Storage App
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("[id=btnSave]").forEach(button => {
-        button.addEventListener("click", function () {
-            let parent = button.closest(".form");
-            let inputs = parent.querySelectorAll("input");
-            let result = parent.querySelector("h3");
-            let category = parent.closest("main").id; // Get category based on main element ID
-            
-            let inputValues = Array.from(inputs).map(input => input.value.trim()).join(", ");
-            
-            console.log("Inputs:", inputValues); // Debugging log
-            console.log("Result:", result.textContent); // Debugging log
-            
-            if (inputValues && result && result.textContent.trim() !== "") {
-                saveResult(category, inputValues, result.textContent);
-            } else {
-                alert("Please enter values and calculate before saving.");
-            }
-        });
-    });
-    
-    let clearButton = document.getElementById("clearResults");
-    if (clearButton) {
-        clearButton.addEventListener("click", clearResults);
-    }
+//Pages active/Hidden\\
+document.addEventListener('DOMContentLoaded', () => { 
+    const menuLinks = document.querySelectorAll('.menu a');
+    const pages = document.querySelectorAll('.page');  // Menu pages
+    const navLinks = document.querySelectorAll('.navbar a');
+    const pages2 = document.querySelectorAll('.page2');  // Nav pages
 
-    displaySavedResults();
-});
+    menuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = e.target.getAttribute('data-target');
 
-function saveResult(category, inputValue, resultValue) {
-    let savedResults = JSON.parse(localStorage.getItem("savedResults")) || {};
-    
-    if (!savedResults[category]) {
-        savedResults[category] = [];
-    }
-    
-    savedResults[category].push({ input: inputValue, result: resultValue });
-    localStorage.setItem("savedResults", JSON.stringify(savedResults));
-
-    console.log("Saved Results:", savedResults); // Debugging log
-    displaySavedResults();
-}
-
-function displaySavedResults() {
-    let savedContainer = document.getElementById("saved");
-    savedContainer.innerHTML = ""; // Clear previous content
-    let savedResults = JSON.parse(localStorage.getItem("savedResults")) || {};
-    
-    console.log("Displaying Saved Results:", savedResults); // Debugging log
-    
-    if (Object.keys(savedResults).length === 0) {
-        savedContainer.innerHTML = "<p>No saved results.</p>";
-    } else {
-        for (let category in savedResults) {
-            let categoryDiv = document.createElement("div");
-            categoryDiv.innerHTML = `<h2>${category}</h2>`;
-            
-            savedResults[category].forEach(entry => {
-                let entryDiv = document.createElement("p");
-                entryDiv.textContent = `Inputs: ${entry.input}, Result: ${entry.result}`;
-                categoryDiv.appendChild(entryDiv);
+            // Hide all menu pages and show the selected one
+            pages.forEach(page => {
+                page.classList.toggle('active', page.id === targetId);
+                page.classList.toggle('hidden', page.id !== targetId);
             });
 
-            savedContainer.appendChild(categoryDiv);
-        }
-    }
-}
+            // Hide all nav pages when a menu page is active
+            pages2.forEach(page2 => {
+                page2.classList.remove('active2');
+                page2.classList.add('hidden2');
+            });
+        });
+    });
 
-function clearResults() {
-    console.log("Clearing localStorage..."); // Debugging log
-    localStorage.removeItem("savedResults");
-    displaySavedResults();
-}
+    navLinks.forEach(nav => {
+        nav.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId2 = e.target.getAttribute('data-target-2');
+
+            // Hide all nav pages and show the selected one
+            pages2.forEach(page2 => {
+                page2.classList.toggle('active2', page2.id === targetId2);
+                page2.classList.toggle('hidden2', page2.id !== targetId2);
+            });
+
+            // Hide all menu pages when a nav page is active
+            pages.forEach(page => {
+                page.classList.remove('active');
+                page.classList.add('hidden');
+            });
+        });
+    });
+});

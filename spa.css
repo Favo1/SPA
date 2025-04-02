@@ -1,9 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
     background-image: url(images/Login.jpg);
-
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -284,9 +287,8 @@ footer p {
 
 #circResult, #radResult, #quadResult {
     font-style: Verdana;
-    font-size: 1.5rem;
-    color: hsl(308, 71%, 55%);
-    animation: answer 2.5s infinite;
+    font-size: 1.7rem;
+    animation: answer 1.5s infinite;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 

@@ -102,11 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('#home')?.classList.remove('hidden2');
     document.querySelector('#home')?.classList.add('active2');
 
-
-   
-
-   
-
    menuLinks.forEach(link => {
        link.addEventListener('click', (e) => {
            e.preventDefault();

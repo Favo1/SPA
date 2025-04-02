@@ -51,7 +51,7 @@ function displaySavedResults() {
     console.log("Displaying Saved Results:", savedResults); // Debugging log
     
     if (Object.keys(savedResults).length === 0) {
-        savedContainer.innerHTML = "<p>No saved results.</p>";
+        savedContainer.innerHTML = "<p>No saved results. <br> Click the save button to save a result :)</p>";
     } else {
         for (let category in savedResults) {
             let categoryDiv = document.createElement("div");

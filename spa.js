@@ -95,18 +95,17 @@ document.addEventListener("DOMContentLoaded", function() {
    const navLinks = document.querySelectorAll('.navbar a'); // Nav links
    const pages2 = document.querySelectorAll('.page2');  // Nav pages
 
-   const homePage = document.querySelector('#home');
-   const homePage2 = document.querySelector('#home2');
-
    // Hide all pages initial
+   
+    // Set home page as default
+    document.querySelectorAll('.page, .page2').forEach(page => page.classList.add('hidden2'));
+    document.querySelector('#home')?.classList.remove('hidden2');
+    document.querySelector('#home')?.classList.add('active2');
 
-    // Hide all pages first
-    pages.forEach(page => page.classList.add('hidden'));
-    pages2.forEach(page2 => page2.classList.add('hidden2'));
 
-    // Show only the home page by default
-    if (homePage) homePage.classList.remove('hidden');
-    if (homePage2) homePage2.classList.remove('hidden2');
+   
+
+   
 
    menuLinks.forEach(link => {
        link.addEventListener('click', (e) => {

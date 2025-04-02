@@ -241,7 +241,7 @@ main a:visited {
 }
  
 /*Images*/
-#circImg, #radImg, #quadImg{
+#circImg, #radImg, #quadImg, #mathImg{
     max-height: 300px;
     max-width: 500px;
     text-align: center;

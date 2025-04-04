@@ -1,6 +1,6 @@
 # Calculators
 <p align="center">
- <img src="images/Preview.png"></a>
+ <img src="https://i.pinimg.com/1200x/1a/2a/a0/1a2aa00f7da302fd54fcc44c72aca8a1.jpg"></a>
 </p>
 <h3 align="center">Calculators</h3>
 
@@ -37,24 +37,29 @@ To get started with the SPA,
 
 
 ```
-Open the SPA.html in a suitable IDE preferably, Visual Studio Code or Entprise edition 
+Open the SPA.html in a suitable IDE preferably, Visual Studio Code or Entprise edition
 ```
 
 ## Usage <a name = "usage"></a>
 
 - Solve circumference of a circle
 <p align="center">
- <img src="images/Circ.png"></a>
+ <img src="https://i.pinimg.com/1200x/1a/2a/a0/1a2aa00f7da302fd54fcc44c72aca8a1.jpg"></a>
 </p>
 
 - Solve radius of a circle
 <p align="center">
- <img src="images/Rad.png"></a>
+ <img src="https://i.pinimg.com/1200x/7e/07/a0/7e07a0e2f4cbf55650194655a2230339.jpg"></a>
 </p>
 
-- Solve a Quadratc equation
+- Solve a Quadratic equation
 <p align="center">
- <img src="images/Quad.png"></a>
+ <img src="https://i.pinimg.com/1200x/0d/a7/14/0da714624b86c1979b69ddeac69c78fc.jpg"></a>
+</p>
+
+- Save results for future refernces#
+<p align="center">
+ <img src="https://i.pinimg.com/1200x/1c/9f/8f/1c9f8fc5b361a2dfe46d4bd3c36fbe90.jpg"></a>
 </p>
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>

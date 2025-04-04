@@ -41,7 +41,7 @@ Open the SPA.html in a suitable IDE preferably, Visual Studio Code or Entprise e
 ```
 
 ## Usage <a name = "usage"></a>
-
+x
 - Solve circumference of a circle
 <p align="center">
  <img src="https://i.pinimg.com/1200x/1a/2a/a0/1a2aa00f7da302fd54fcc44c72aca8a1.jpg"></a>
@@ -66,3 +66,4 @@ Open the SPA.html in a suitable IDE preferably, Visual Studio Code or Entprise e
 
 - Code used <a href="https://gist.github.com/prof3ssorSt3v3">Steve Griffith prof3ssorSt3v3</a>
 - Inspirations <a href="https://www.calculatorsoup.com/">Calculator Soup</a> <a href="https://www.wolframalpha.com">Wolframalpha</a>
+- Icons - <a href="https://fontawesome.com/">Fontawesome</a>

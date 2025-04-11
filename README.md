@@ -12,11 +12,11 @@
 - [Usage](#usage)
 - [Acknowledgments](#acknowledgments)
 
-## ❔ About <a name="about"></a>
+## About <a name="about"></a>
 
 Calculators is a page dedicated to solving relatively simple math problems such as, circumference, radius, diameter, and quadratic equations. My vision and background for this single page is that various maths equations & formulas can be integrated into a single page with the help of JavaScript, I believe this page will be a very useful page for (currently) basic to more comprehensive calculator tools (Future developments).
 
-## Getting Started ⬇️ <a name="getting_started"></a>
+## Getting Started <a name="getting_started"></a>
 
 To get started with the SPA, 
 1) Download the entire project folder (.ZIP)
@@ -40,7 +40,7 @@ To get started with the SPA,
 - Enter your values & Save your ressult (Accessible from the "saved results" page)
 ```````````````````````````````````````````````````````````````````````````````````````
 
-## 🔧 Usage <a name="usage"></a>
+## Usage <a name="usage"></a>
 
 - Solve circumference of a circle
 <p align="center">
@@ -62,7 +62,7 @@ To get started with the SPA,
  <img src="https://i.pinimg.com/1200x/1c/9f/8f/1c9f8fc5b361a2dfe46d4bd3c36fbe90.jpg"></a>
 </p>
 
-## 🎉 Acknowledgments <a name="acknowledgments"></a>
+## Acknowledgments <a name="acknowledgments"></a>
 
 - Code used <a href="https://gist.github.com/prof3ssorSt3v3">Steve Griffith prof3ssorSt3v3</a>
 - Inspirations <a href="https://www.calculatorsoup.com/">Calculator Soup</a> <a href="https://www.wolframalpha.com">Wolframalpha</a>

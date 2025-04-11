@@ -16,7 +16,7 @@
 
 Calculators is a page dedicated to solving relatively simple math problems such as, circumference, radius, diameter, and quadratic equations. My vision and background for this single page is that various maths equations & formulas can be integrated into a single page with the help of JavaScript, I believe this page will be a very useful page for (currently) basic to more comprehensive calculator tools (Future developments).
 
-## Getting Started <a name="getting_started"></a>
+## Getting Started <a name="getting started"></a>
 
 To get started with the SPA, 
 1) Download the entire project folder (.ZIP)

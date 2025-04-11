@@ -10,38 +10,36 @@
 - [About](#about)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Acknowledgments](#-acknowledgments)
+- [Acknowledgments](#acknowledgments)
 
-## About <a name = "about"></a>
+## ❔ About 
 
 Calculators is a page dedicated to solving relatively simple math problems such as, circumference, radius, diameter, and quadratic equations. My vision and background for this single page is that various maths equations & formulas can be integrated into a single page with the help of JavaScript, I believe this page will be a very useful page for (currently) basic to more comprehensive calculator tools (Future developments).
 
-## Getting Started <a name = "getting_started"></a>
+## ⬇️ Getting Started
 
 To get started with the SPA, 
 1) Dowmnload the entire project folder (.ZIP)
 2) Open the folder in a suitable IDE
 
-### Prerequisites
+### ⚙️ Prerequisites
 
 - Fully updated Web browser (Google Chrome, Microsoft Egde, Opera, Brave, Safari.)
 - Live Server extension for running the web page and other files
 - Visual Studio Code
 
-### Installing
-
+### 🛠️ Installing
+```````````````````````````````````````````````````````````````````````````````````````
+- Open the SPA.html in a suitable IDE, preferably Visual Studio Code
 - Open the SPA in one of the aformentioned browsers for maximum compatibility
 - Follow the instructions on the main home page
 - Select from any of the available calculators
 - Enter your values & Save your ressult (Accessible from the "saved results" page)
 
+```````````````````````````````````````````````````````````````````````````````````````
 
-```
-Open the SPA.html in a suitable IDE preferably, Visual Studio Code or Entprise edition
-```
+## 🔧 Usage 
 
-## Usage <a name = "usage"></a>
-x
 - Solve circumference of a circle
 <p align="center">
  <img src="https://i.pinimg.com/1200x/1a/2a/a0/1a2aa00f7da302fd54fcc44c72aca8a1.jpg"></a>
@@ -57,12 +55,12 @@ x
  <img src="https://i.pinimg.com/1200x/0d/a7/14/0da714624b86c1979b69ddeac69c78fc.jpg"></a>
 </p>
 
-- Save results for future refernces#
+- Save results for future refernces
 <p align="center">
  <img src="https://i.pinimg.com/1200x/1c/9f/8f/1c9f8fc5b361a2dfe46d4bd3c36fbe90.jpg"></a>
 </p>
 
-## 🎉 Acknowledgments <a name = "acknowledgments"></a>
+## 🎉 Acknowledgments
 
 - Code used <a href="https://gist.github.com/prof3ssorSt3v3">Steve Griffith prof3ssorSt3v3</a>
 - Inspirations <a href="https://www.calculatorsoup.com/">Calculator Soup</a> <a href="https://www.wolframalpha.com">Wolframalpha</a>

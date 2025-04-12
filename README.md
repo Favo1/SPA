@@ -14,7 +14,7 @@
 
 ## About <a name="about"></a>
 
-Calculators is a page dedicated to solving relatively simple math problems such as, circumference, radius, diameter, and quadratic equations. My vision and background for this single page is that various maths equations & formulas can be integrated into a single page with the help of JavaScript, I believe this page will be a very useful page for (currently) basic to more comprehensive calculator tools (Future developments).
+Calculators is a page dedicated to solving simple math problems such as circumference, radius, diameter, and quadratic equations. My vision and background for this single page is that various maths equations & formulas can be integrated into a single page with the help of JavaScript. I believe this page will be very useful for (currently) basic to more comprehensive calculator tools (Future developments).
 
 ## Genesis <a name = "Genesis"></a>
 
@@ -24,7 +24,7 @@ To get started with the SPA,
 
 ### ⚙️ Prerequisites
 
-- Fully updated Web browser (Google Chrome, Microsoft Edge, Opera, Brave, Safari.)
+- Fully updated Web browser (Google Chrome, Microsoft Edge, Opera, Brave, Safari)
 - Visual Studio Code
 - Live Server extension in visual Studio for running the web page and accompanying files
 
@@ -33,11 +33,10 @@ To get started with the SPA,
 
 ```````````````````````````````````````````````````````````````````````````````````````
 - Open the SPA.html in a suitable IDE, preferably Visual Studio Code
-- 
 - Open the SPA in one of the aforementioned browsers for maximum compatibility
 - Follow the instructions on the main home page
 - Select from any of the available calculators
-- Enter your values & Save your ressult (Accessible from the "saved results" page)
+- Enter your values & Save your result (Accessible from the "saved results" page)
 ```````````````````````````````````````````````````````````````````````````````````````
 
 ## Usage <a name = "usage"></a>
@@ -47,7 +46,7 @@ To get started with the SPA,
  <img src="https://i.pinimg.com/1200x/1a/2a/a0/1a2aa00f7da302fd54fcc44c72aca8a1.jpg"></a>
 </p>
 
-- Solve radius of a circle
+- Solve for the radius of a circle
 <p align="center">
  <img src="https://i.pinimg.com/1200x/7e/07/a0/7e07a0e2f4cbf55650194655a2230339.jpg"></a>
 </p>
